@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "498a1948-d68f-4c8e-a740-81fb956c7bc9",
+		"name": "Control Empresa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "POST EMPRESA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Supermercado La Torre\",\r\n    \"correo\": \"laTorre@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"rol\": \"Supermercado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/empresa/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT EMPRESA",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAyYzJmNmIzMTliODE5Yzg1MjA1NDIiLCJpYXQiOjE2Nzc5MDI3MjksImV4cCI6MTY3NzkxNzEyOX0.O_OJN-EBPqkf7Iv3deIJKJOZ-3h8qyuQoB7OkqZV-zw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Los Girasoles\",\r\n    \"correo\": \"losGirasoles@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"rol\": \"Restaurante\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/empresa/editar/6402c2f6b319b819c8520542",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"editar",
+								"6402c2f6b319b819c8520542"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEL EMPRESA",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAyYmVmYTRhYWQwODFmN2FkZmZhMzEiLCJpYXQiOjE2Nzc5MDE1NzQsImV4cCI6MTY3NzkxNTk3NH0.bS-F_h4hylR4Vj4IOr4PvQm5QvB_hHr4oAin2k6A2b8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/empresa/eliminar/6402bf7b1bf3bf48c82c85cf",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"eliminar",
+								"6402bf7b1bf3bf48c82c85cf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET EMPRESAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/empresa/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sucursales",
+			"item": [
+				{
+					"name": "POST SUCURSALES",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAyYzJmNmIzMTliODE5Yzg1MjA1NDIiLCJpYXQiOjE2Nzc5MDI3MjksImV4cCI6MTY3NzkxNzEyOX0.O_OJN-EBPqkf7Iv3deIJKJOZ-3h8qyuQoB7OkqZV-zw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipio\": \"Mixco\",\r\n    \"direccion\": \"Zona 1 Mixco\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sucursal/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT SUCURSALES",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAyYzJmNmIzMTliODE5Yzg1MjA1NDIiLCJpYXQiOjE2Nzc5MDI3MjksImV4cCI6MTY3NzkxNzEyOX0.O_OJN-EBPqkf7Iv3deIJKJOZ-3h8qyuQoB7OkqZV-zw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipio\": \"Capital\",\r\n    \"direccion\": \"Boulevard el Frutal 14-00 zona 5 Villa Nueva, local 34 y 35 1er. Nivel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sucursal/editar/6402c449d4dff98bde34d81b",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"editar",
+								"6402c449d4dff98bde34d81b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET SUCURSALES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAyYzJmNmIzMTliODE5Yzg1MjA1NDIiLCJpYXQiOjE2Nzc5MDI3MjksImV4cCI6MTY3NzkxNzEyOX0.O_OJN-EBPqkf7Iv3deIJKJOZ-3h8qyuQoB7OkqZV-zw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/sucursal/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEL SUCURSALES",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAyYzJmNmIzMTliODE5Yzg1MjA1NDIiLCJpYXQiOjE2Nzc5MDI3MjksImV4cCI6MTY3NzkxNzEyOX0.O_OJN-EBPqkf7Iv3deIJKJOZ-3h8qyuQoB7OkqZV-zw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/sucursal/eliminar/6402c465d4dff98bde34d81e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"eliminar",
+								"6402c465d4dff98bde34d81e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"losGirasoles@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AGREGAR SUCURSAL A EMPRESA",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAyYzJmNmIzMTliODE5Yzg1MjA1NDIiLCJpYXQiOjE2Nzc5MDI3MjksImV4cCI6MTY3NzkxNzEyOX0.O_OJN-EBPqkf7Iv3deIJKJOZ-3h8qyuQoB7OkqZV-zw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/sucursal/asignar/6402c47bd4dff98bde34d821",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursal",
+						"asignar",
+						"6402c47bd4dff98bde34d821"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MIS SUCURSALES",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDAyYzJmNmIzMTliODE5Yzg1MjA1NDIiLCJpYXQiOjE2Nzc5MDI3MjksImV4cCI6MTY3NzkxNzEyOX0.O_OJN-EBPqkf7Iv3deIJKJOZ-3h8qyuQoB7OkqZV-zw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/empresa/MySucursales",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empresa",
+						"MySucursales"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
